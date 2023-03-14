@@ -83,7 +83,7 @@ export const DownloadButtons = ({ title }: IProps) => {
               onClick={downloadPng(ref.current, width, title)}
             >
               <DownloadIcon />
-              {name} PNG ({width} x {height})
+              {name} PNG (до {width}×{height})
             </Button>
           );
         })}
