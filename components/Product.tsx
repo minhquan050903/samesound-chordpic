@@ -30,7 +30,7 @@ export const Product: React.FunctionComponent<
   const { colorMode } = useColorMode();
 
   const handleCheckout = async (price: Price) => {
-    const scope = new Scope();
+    const scope = new Sentry.Scope();
 
     setPriceIdLoading(price.id);
 
@@ -65,7 +65,16 @@ export const Product: React.FunctionComponent<
         ),
         wait(gaTimeout, null),
       ]);
-    } 
+    } catch (err) {
+      captureException(err, {
+        extra: {
+          gaDefined: typeof gtag !== "undefined",
+          analyticsClientId
+        }
+      });
+      captureMessage(`Failed to track checkout: ${
+        err instanceof Error ? err.message : err
+      }`)
     }
 
     try {
@@ -82,8 +91,16 @@ export const Product: React.FunctionComponent<
       }
 
       stripe.redirectToCheckout({ sessionId });
-    } 
-      
+    } catch (error) {
+      captureException(error, {
+        extra: {
+          gaDefined: typeof gtag !== "undefined",
+          analyticsClientId,
+        }
+      });
+      captureMessage(`Error creating Stripe checkout session: ${
+        error instanceof Error ? error.message : error
+      }`)
     } finally {
       setPriceIdLoading(undefined);
     }
