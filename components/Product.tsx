@@ -30,7 +30,7 @@ export const Product: React.FunctionComponent<
   const { colorMode } = useColorMode();
 
   const handleCheckout = async (price: Price) => {
-    const scope = new Sentry.Scope();
+    const scope = new Scope();
 
     setPriceIdLoading(price.id);
 
