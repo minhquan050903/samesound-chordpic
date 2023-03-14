@@ -30,7 +30,7 @@ export const Product: React.FunctionComponent<
   const { colorMode } = useColorMode();
 
   const handleCheckout = async (price: Price) => {
-    const scope = new Scope();
+    const scope = new scope();
 
     setPriceIdLoading(price.id);
 
