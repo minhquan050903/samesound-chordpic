@@ -5,7 +5,6 @@ import { ChordSettings, SVGuitarChord } from "svguitar";
 import { SubscriptionType } from "../../types";
 import { useSubscription } from "../../utils/useSubscription";
 import { useChart } from "./useChart";
-import * as Sentry from "@sentry/react";
 
 const defaultSVGuitarSettings: Partial<ChordSettings> = {
   fretSize: 1.75,
@@ -43,10 +42,7 @@ export const ChordChart: React.FunctionComponent = () => {
           .draw();
 
         setSize(size);
-      } catch (err) {
-        Sentry.captureException(err, { extra: { chart } });
-
-        throw err;
+      } 
       }
     }
   }, [chart, ref, setSize, watermark]);
