@@ -6,7 +6,6 @@ import { Price, ProductWithPrice } from "../types";
 import { postData } from "../utils/helpers";
 import { getStripe } from "../utils/stripe-client";
 import { useUser } from "../utils/useUser";
-import * as Sentry from "@sentry/nextjs";
 import { GA } from '../services/google-analytics'
 
 export interface ProductProps {
@@ -31,7 +30,7 @@ export const Product: React.FunctionComponent<
   const { colorMode } = useColorMode();
 
   const handleCheckout = async (price: Price) => {
-    const scope = new Sentry.Scope();
+    const scope = new Scope();
 
     setPriceIdLoading(price.id);
 
@@ -66,16 +65,7 @@ export const Product: React.FunctionComponent<
         ),
         wait(gaTimeout, null),
       ]);
-    } catch (err) {
-      Sentry.captureException(err, {
-        extra: {
-          gaDefined: typeof gtag !== "undefined",
-          analyticsClientId
-        }
-      });
-      Sentry.captureMessage(`Failed to track checkout: ${
-        err instanceof Error ? err.message : err
-      }`)
+    } 
     }
 
     try {
@@ -87,21 +77,13 @@ export const Product: React.FunctionComponent<
       const stripe = await getStripe();
 
       if (!stripe) {
-        Sentry.captureMessage("Stripe was not defined during checkout");
+        captureMessage("Stripe was not defined during checkout");
         return;
       }
 
       stripe.redirectToCheckout({ sessionId });
-    } catch (error) {
-      Sentry.captureException(error, {
-        extra: {
-          gaDefined: typeof gtag !== "undefined",
-          analyticsClientId,
-        }
-      });
-      Sentry.captureMessage(`Error creating Stripe checkout session: ${
-        error instanceof Error ? error.message : error
-      }`)
+    } 
+      
     } finally {
       setPriceIdLoading(undefined);
     }
