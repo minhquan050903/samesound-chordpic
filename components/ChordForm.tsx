@@ -127,13 +127,13 @@ export const ChordForm: React.FunctionComponent<{
         <Box>
           <FormControl isInvalid={!!errors.title}>
             <FormLabel>
-              Title
+              Название
               <Input
-                placeholder="Enter title..."
+                placeholder="Аккорд..."
                 {...register("title", {
                   maxLength: {
                     value: 300,
-                    message: "Title is too long.",
+                    message: "Название слишком длинное",
                   },
                 })}
               />
@@ -146,14 +146,14 @@ export const ChordForm: React.FunctionComponent<{
         <Box>
           <FormControl isInvalid={!!errors.position}>
             <FormLabel>
-              Starting fret
+              Первый лад
               <Input
-                placeholder="Enter starting fret..."
+                placeholder="Стартовый лад..."
                 {...register("position", {
                   valueAsNumber: true,
                   min: {
                     value: 1,
-                    message: "Starting fret must be at least 1",
+                    message: "Начальный лад должен быть цифрой",
                   },
                   max: 50,
                 })}
@@ -168,9 +168,9 @@ export const ChordForm: React.FunctionComponent<{
         <Box>
           <FormControl isInvalid={!!errors.frets}>
             <FormLabel>
-              Number of frets
+              Количество ладов
               <Input
-                placeholder="Number of frets..."
+                placeholder="5..."
                 {...register("frets", {
                   valueAsNumber: true,
                   min: {
@@ -179,7 +179,7 @@ export const ChordForm: React.FunctionComponent<{
                   },
                   max: {
                     value: 50,
-                    message: "Too many frets!",
+                    message: "Слишком много ладов!",
                   },
                 })}
                 type="number"
@@ -193,7 +193,7 @@ export const ChordForm: React.FunctionComponent<{
         <Box>
           <FormControl isInvalid={!!errors.strings}>
             <FormLabel>
-              Number of strings
+              Количество струн
               <Input
                 placeholder="Number of string..."
                 {...register("strings", {
@@ -204,7 +204,7 @@ export const ChordForm: React.FunctionComponent<{
                   },
                   max: {
                     value: 50,
-                    message: "Too many strings!",
+                    message: "Слишком много струн!",
                   },
                 })}
                 type="number"
@@ -226,15 +226,15 @@ export const ChordForm: React.FunctionComponent<{
           <Box>
             <FormControl isInvalid={!!errors.style}>
               <FormLabel>
-                Style
+                Оформление
                 <Select {...register("style")}>
-                  <option value={ChordStyle.normal}>Normal</option>
+                  <option value={ChordStyle.normal}>Обычное</option>
 
                   {subscription === SubscriptionType.PRO && (
-                    <option value={ChordStyle.handdrawn}>Handdrawn</option>
+                    <option value={ChordStyle.handdrawn}>Рисованное</option>
                   )}
                   {subscription !== SubscriptionType.PRO && (
-                    <option disabled>Handdrawn (Pro only)</option>
+                    <option disabled>Рисованное (Pro)</option>
                   )}
                 </Select>
               </FormLabel>
@@ -246,10 +246,10 @@ export const ChordForm: React.FunctionComponent<{
           <Box>
             <FormControl>
               <FormLabel>
-                Orientation
+                Ориентация
                 <Select {...register("orientation")}>
-                  <option value={Orientation.vertical}>Vertical</option>
-                  <option value={Orientation.horizontal}>Horizontal</option>
+                  <option value={Orientation.vertical}>Вертикальная</option>
+                  <option value={Orientation.horizontal}>Горизонтальная</option>
                 </Select>
               </FormLabel>
               {errors.orientation?.message && (
@@ -261,7 +261,7 @@ export const ChordForm: React.FunctionComponent<{
           </Box>
           <Box display="flex" alignItems="center">
             <Checkbox {...register("fixedDiagramPosition")}>
-              Fixed diagram position
+              Фиксированная позиция
               <Tooltip
                 placement="top"
                 label="If enabled, the space between the diagram and the title will always be the same."
@@ -274,14 +274,14 @@ export const ChordForm: React.FunctionComponent<{
           </Box>
           <Box display="flex" alignItems="center">
             <Checkbox {...register("noPosition")}>
-              Hide position
+              Скрыть позицию
               <QuestionIcon ml={2} />
             </Checkbox>
           </Box>
           <Box>
             <FormControl>
               <FormLabel>
-                Height
+                Высота
                 <Controller
                   control={control}
                   name="fretSize"
@@ -301,7 +301,7 @@ export const ChordForm: React.FunctionComponent<{
           <Box>
             <FormControl>
               <FormLabel>
-                Finger size
+                Размер аппликатуры
                 <Controller
                   control={control}
                   name="fingerSize"
@@ -321,7 +321,7 @@ export const ChordForm: React.FunctionComponent<{
           <Box>
             <FormControl>
               <FormLabel>
-                Finger font size
+                Размер шрифта аппликатуры
                 <Controller
                   control={control}
                   name="fingerTextSize"
@@ -341,7 +341,7 @@ export const ChordForm: React.FunctionComponent<{
           <Box>
             <FormControl>
               <FormLabel>
-                Stroke width
+                Ширина линий
                 <Controller
                   control={control}
                   name="strokeWidth"
@@ -361,7 +361,7 @@ export const ChordForm: React.FunctionComponent<{
           <Box>
             <FormControl>
               <FormLabel>
-                Color
+                Цвет
                 <Controller
                   control={control}
                   name="color"
@@ -375,7 +375,7 @@ export const ChordForm: React.FunctionComponent<{
           <Box>
             <FormControl>
               <FormLabel>
-                Background color
+                Фоновый цвет
                 <Controller
                   control={control}
                   name="backgroundColor"
@@ -396,7 +396,7 @@ export const ChordForm: React.FunctionComponent<{
                 onClick={resetSettings}
               >
                 <DeleteIcon />
-                Reset settings
+                Сбросить настройки
               </Button>
             </FormLabel>
           </Flex>
@@ -408,7 +408,7 @@ export const ChordForm: React.FunctionComponent<{
         ) : (
           <ChevronDownIcon boxSize={6} />
         )}
-        {isOpen ? "Hide" : "Show more"} settings...
+        {isOpen ? "Меньше" : "Больше"} настроек...
       </Button>
     </>
   );
