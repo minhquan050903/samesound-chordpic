@@ -5,7 +5,6 @@ import { SUPPORT_EMAIL } from "../../global";
 import { defaultValues } from "../ChordForm";
 import { ChordChart } from "./ChordChart";
 import { useChart } from "./useChart";
-import * as Sentry from "@sentry/react";
 
 const ErrorFallback: React.FunctionComponent<{
   onReset(): void;
@@ -46,8 +45,6 @@ export const ChordResult: React.FunctionComponent = () => {
   }, [chart.chord, setChart]);
 
   return (
-    <Sentry.ErrorBoundary fallback={<ErrorFallback onReset={resetSettings} />}>
-      <ChordChart />;
-    </Sentry.ErrorBoundary>
+      <ChordChart />
   );
 };
