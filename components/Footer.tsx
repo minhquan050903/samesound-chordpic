@@ -28,7 +28,7 @@ export const Footer = () => {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <RedditIcon borderRadius={100} size="1.5em" /> 
+          <TelegramIcon borderRadius={100} size="1.5em" /> 
         </Link>
         <Link
           href="https://vk.com/samesound"
@@ -38,7 +38,7 @@ export const Footer = () => {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <FacebookIcon borderRadius={100} size="1.5em" /> 
+          <VkIcon borderRadius={100} size="1.5em" /> 
         </Link>
         <Spacer />
         <Link href="/about">О проекте</Link>
