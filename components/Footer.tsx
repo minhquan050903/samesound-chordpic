@@ -7,7 +7,7 @@ import {
   Spacer,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { FacebookIcon, RedditIcon } from "react-share";
+import { TelegramIcon, VkIcon } from "react-share";
 
 export const Footer = () => {
   const bg = useColorModeValue("gray.100", "gray.900");
@@ -21,29 +21,29 @@ export const Footer = () => {
         flexDirection={["column", "column", "row"]}
       >
         <Link
-          href="https://reddit.com/r/chordpic"
+          href="https://t.me/samesound"
           display="flex"
           alignItems="center"
           gap={2}
           rel="noopener noreferrer"
           target="_blank"
         >
-          <RedditIcon borderRadius={100} size="1.5em" /> Reddit
+          <RedditIcon borderRadius={100} size="1.5em" /> 
         </Link>
         <Link
-          href="https://www.facebook.com/chordpic"
+          href="https://vk.com/samesound"
           display="flex"
           alignItems="center"
           gap={2}
           rel="noopener noreferrer"
           target="_blank"
         >
-          <FacebookIcon borderRadius={100} size="1.5em" /> Facebook
+          <FacebookIcon borderRadius={100} size="1.5em" /> 
         </Link>
         <Spacer />
-        <Link href="/about">About</Link>
-        <Link href="/terms">Terms of Use</Link>
-        <Link href="/privacy-notice">Privacy</Link>
+        <Link href="/about">О проекте</Link>
+        <Link href="/terms">Условия использования</Link>
+        <Link href="/privacy-notice">Политика конфиденциальности</Link>
       </Container>
     </GridItem>
   );
