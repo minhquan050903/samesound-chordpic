@@ -11,6 +11,7 @@ import {
 import { useEffect, useMemo, useRef, useState } from "react";
 import { FaTelegram, FaTwitter, FaWhatsapp, FaOdnoklassniki, FaVk } from "react-icons/fa";
 import { MdFacebook, MdShare, MdEmail } from "react-icons/md";
+import { Copy } from "react-feather";
 import {
   EmailShareButton,
   FacebookShareButton,
@@ -49,7 +50,7 @@ export const ShareButtons = ({ chart }: IProps) => {
     });
   }
 
-  const title = `ChordPic.com | ${chart.settings.title || "Аккорд без названия"}`;
+  const title = `Генератор диаграмм SAMESOUND | ${chart.settings.title || "Аккорд без названия"}`;
 
   const copyLink = () => {
     if (inputRef.current) {
@@ -65,7 +66,7 @@ export const ShareButtons = ({ chart }: IProps) => {
       </Heading>
       <Button variant="outline" onClick={share}>
         <Icon as={MdShare} mr={1} />
-        Generate Sharing Link
+        Ссылка на диаграмму
       </Button>
 
       {link && (
@@ -81,7 +82,7 @@ export const ShareButtons = ({ chart }: IProps) => {
             />
             <InputRightElement width="4.5rem">
               <Button h="1.75rem" size="sm" onClick={copyLink}>
-                Копировать
+                <Icon as={Copy} mr={1} />
               </Button>
             </InputRightElement>
           </InputGroup>
@@ -137,7 +138,7 @@ export const ShareButtons = ({ chart }: IProps) => {
             <EmailShareButton
               subject={title}
               url={link}
-              body="Here's a chord chart I created on ChordPic.com"
+              body="Диаграмма аккорда, которую я создал в генераторе диаграмм SAMESOUND"
             >
               <Button size="sm" variant="outline">
                 <Icon as={MdEmail} mr={1} />
