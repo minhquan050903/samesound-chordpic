@@ -34,20 +34,20 @@ interface IProps {
 // size multipliers (1 => original size)
 const pngSizeMultipliers: { multiplier: number; name: string }[] = [
   {
-    multiplier: 0.5,
-    name: "Small",
-  },
-  {
-    multiplier: 1,
-    name: "Medium",
-  },
-  {
     multiplier: 2,
-    name: "Large",
+    name: "Малый",
   },
   {
     multiplier: 4,
-    name: "Huge",
+    name: "Средний",
+  },
+  {
+    multiplier: 6,
+    name: "Большой",
+  },
+  {
+    multiplier: 8,
+    name: "Огромный",
   },
 ];
 
@@ -57,7 +57,7 @@ export const DownloadButtons = ({ title }: IProps) => {
   return (
     <Box mt={8} id="download">
       <Heading as="h2" size="lg" mb={3}>
-        Download
+        Скачать
       </Heading>
       <Flex gap={3} wrap="wrap">
         <Button
