@@ -56,8 +56,8 @@ export const theme = extendTheme(
       },
     },
     fonts: {
-      heading: `'Besley', sans-serif`,
-      body: `'Inter', sans-serif`,
+      heading: `'IBM Plex Serif', serif`,
+      body: `'IBM Plex Sans', sans-serif`,
     },
     styles: {
       global: () => ({
