@@ -7,7 +7,7 @@ import {
   Spacer,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { TelegramIcon, VkIcon } from "react-share";
+import { TelegramIcon, VKIcon } from "react-share";
 
 export const Footer = () => {
   const bg = useColorModeValue("gray.100", "gray.900");
@@ -38,7 +38,7 @@ export const Footer = () => {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <VkIcon borderRadius={100} size="1.5em" /> 
+          <VKIcon borderRadius={100} size="1.5em" /> 
         </Link>
         <Spacer />
         <Link href="/about">О проекте</Link>
