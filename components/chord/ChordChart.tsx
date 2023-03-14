@@ -42,7 +42,10 @@ export const ChordChart: React.FunctionComponent = () => {
           .draw();
 
         setSize(size);
-      } 
+      } catch (err) {
+        Sentry.captureException(err, { extra: { chart } });
+
+        throw err;
       }
     }
   }, [chart, ref, setSize, watermark]);
