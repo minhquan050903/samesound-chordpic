@@ -56,7 +56,7 @@ const CloseIcon = () => {
 
   return (
     <svg width="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-      <title>Close</title>
+      <title>Закрыть</title>
       <path
         fill={bg}
         d="M9.00023 7.58599L13.9502 2.63599L15.3642 4.04999L10.4142 8.99999L15.3642 13.95L13.9502 15.364L9.00023 10.414L4.05023 15.364L2.63623 13.95L7.58623 8.99999L2.63623 4.04999L4.05023 2.63599L9.00023 7.58599Z"
@@ -74,7 +74,7 @@ const MenuIcon = () => {
       xmlns="http://www.w3.org/2000/svg"
       fill={fill}
     >
-      <title>Menu</title>
+      <title>Меню</title>
       <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
     </svg>
   );
@@ -128,7 +128,7 @@ const MenuLinks: React.FunctionComponent<{
           <Box>
             <NextLink href="/" passHref legacyBehavior>
               <Button as="a" size="md" onClick={onCloseMenu} variant="solid">
-                Create chord diagram
+                ← Создать диаграмму
               </Button>
             </NextLink>
           </Box>
@@ -153,29 +153,29 @@ const MenuLinks: React.FunctionComponent<{
           />
         </FormControl>
         <MenuItem onNavigate={onCloseMenu} to="/help">
-          Help
+          FAQ
         </MenuItem>
         <MenuItem onNavigate={onCloseMenu} to="/news">
-          News
+          Новости
         </MenuItem>
         {subscription === SubscriptionType.FREE && (
           <MenuItem onNavigate={onCloseMenu} to="/pricing">
-            Pricing
+            Цены
           </MenuItem>
         )}
 
         {user ? (
           <>
             <MenuItem onNavigate={onCloseMenu} to="/account">
-              Account
+              Аккаунт
             </MenuItem>
             <MenuItem onNavigate={onCloseMenu} to="/api/auth/logout">
-              Sign out
+              Выйти
             </MenuItem>
           </>
         ) : (
           <MenuItem to="/signin" onNavigate={onCloseMenu}>
-            Sign in
+            Войти
           </MenuItem>
         )}
       </Stack>
