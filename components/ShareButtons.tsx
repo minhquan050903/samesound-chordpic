@@ -9,7 +9,7 @@ import {
   InputRightElement,
 } from "@chakra-ui/react";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { FaTelegram, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaTelegram, FaTwitter, FaWhatsapp, FaOdnoklassniki, FaVk } from "react-icons/fa";
 import { MdFacebook, MdShare, MdEmail } from "react-icons/md";
 import {
   EmailShareButton,
@@ -17,6 +17,9 @@ import {
   TelegramShareButton,
   TwitterShareButton,
   WhatsappShareButton,
+  VKShareButton,
+  OKShareButton,
+  MailruShareButton
 } from "react-share";
 import { Chart } from "../domain/chart";
 import { getLink } from "../hooks/url-state";
@@ -46,7 +49,7 @@ export const ShareButtons = ({ chart }: IProps) => {
     });
   }
 
-  const title = `ChordPic.com | ${chart.settings.title || "Unnamed Chord"}`;
+  const title = `ChordPic.com | ${chart.settings.title || "Аккорд без названия"}`;
 
   const copyLink = () => {
     if (inputRef.current) {
@@ -58,7 +61,7 @@ export const ShareButtons = ({ chart }: IProps) => {
   return (
     <Box mt={8} id="share">
       <Heading as="h2" size="lg" mb={3}>
-        Share
+        Поделиться
       </Heading>
       <Button variant="outline" onClick={share}>
         <Icon as={MdShare} mr={1} />
@@ -78,37 +81,51 @@ export const ShareButtons = ({ chart }: IProps) => {
             />
             <InputRightElement width="4.5rem">
               <Button h="1.75rem" size="sm" onClick={copyLink}>
-                Copy
+                Копировать
               </Button>
             </InputRightElement>
           </InputGroup>
 
           <Flex wrap="wrap" gap={1} mt={3}>
-            <FacebookShareButton url={link}>
+            <VKShareButton url={link}>
               <Button size="sm" variant="outline">
-                <Icon as={MdFacebook} mr={1} />
-                Facebook
+                <Icon as={FaVk} mr={1} />
+                VK
               </Button>
-            </FacebookShareButton>
-
+            </VKShareButton>            
+            
             <TelegramShareButton url={link} title={title}>
               <Button size="sm" variant="outline">
                 <Icon as={FaTelegram} mr={1} />
-                Telegram
+                Телеграм
               </Button>
             </TelegramShareButton>
+            
+            <FacebookShareButton url={link}>
+              <Button size="sm" variant="outline">
+                <Icon as={MdFacebook} mr={1} />
+                Фейсбук
+              </Button>
+            </FacebookShareButton>
 
             <TwitterShareButton
               url={link}
               title={title}
-              via="https://chordpic.com"
+              via="https://guitardiagrams.samesound.ru"
               hashtags={["guitar", "chord"]}
             >
               <Button size="sm" variant="outline">
                 <Icon as={FaTwitter} mr={1} />
-                Twitter
+                Твиттер
               </Button>
             </TwitterShareButton>
+            
+            <OKShareButton url={link}>
+              <Button size="sm" variant="outline">
+                <Icon as={FaOdnoklassniki} mr={1} />
+                OK
+              </Button>
+            </OKShareButton> 
 
             <WhatsappShareButton url={link} title={title}>
               <Button size="sm" variant="outline">
