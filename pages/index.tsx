@@ -82,12 +82,12 @@ const Home: NextPage = () => {
               <Box p={3} id="editor" position="relative">
                 <Heading
                   as="h2"
-                  size="md"
+                  size="16px"
                   transform={[null, null, null, "rotate(-45deg)"]}
                   transformOrigin="0 0"
                   position={[null, null, null, "relative"]}
-                  top={14}
-                  left={-1}
+                  top={46px}
+                  left={-7px}
                   display="inline-block"
 				  fontWeight={500}
                 >
@@ -116,13 +116,14 @@ const Home: NextPage = () => {
               <Box p={3} id="result" height="100%" position="relative">
                 <Heading
                   as="h2"
-                  size="md"
+                  size="16px"
                   transform={[null, null, null, "rotate(-45deg)"]}
                   transformOrigin="0 0"
                   position={[null, null, null, "relative"]}
-                  top={8}
-                  left={-2}
+                  top={52px}
+                  left={-7px}
                   display="inline-block"
+				  fontWeight={500}
                 >
                   Диаграмма
                 </Heading>
