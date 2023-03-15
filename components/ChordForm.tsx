@@ -408,7 +408,7 @@ export const ChordForm: React.FunctionComponent<{
         ) : (
           <ChevronDownIcon boxSize={6} />
         )}
-        {isOpen ? "Меньше" : "Больше"} настроек...
+        {isOpen ? "Меньше" : "Больше"} настроек
       </Button>
     </>
   );
