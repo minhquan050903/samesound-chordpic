@@ -47,7 +47,13 @@ export const theme = extendTheme(
       // Input,
       NumberInput: Input,
       Divider,
-      // Button,
+      Button: {
+		variants: {
+			'solid-red-samesound': {
+				bg: "#f70035",
+			},
+		},
+	  },
       Link: {
         baseStyle: ({ colorMode }: { colorMode: ColorMode }) => ({
           color: colorMode === "dark" ? "blue.400" : "blue.600",
@@ -64,9 +70,6 @@ export const theme = extendTheme(
         html: {
           fontSize: "16px",
         },
-        // body: {
-        //   fontFamily: "Quicksand",
-        // },
       }),
     },
   },
