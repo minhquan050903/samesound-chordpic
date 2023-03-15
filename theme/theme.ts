@@ -55,6 +55,62 @@ export const theme = extendTheme(
 				fontWeight: "600",
 				fontSize: "14px",
 			},
+			'share-vk': {
+				bg: "#45668e",
+				color: "#fff",
+				_hover: {
+				bg: "#3d5a7d",
+				color: "#fff",
+				},
+			},
+			'share-tg': {
+				bg: "#0088cc",
+				color: "#fff",
+				_hover: {
+				bg: "#0077b3",
+				color: "#fff",
+				},
+			},
+			'share-fb': {
+				bg: "#1877f2",
+				color: "#fff",
+				_hover: {
+				bg: "#0d6ae4",
+				color: "#fff",
+				},
+			},
+			'share-tw': {
+				bg: "#1da1f2",
+				color: "#fff",
+				_hover: {
+				bg: "#0d95e8",
+				color: "#fff",
+				},
+			},
+			'share-ok': {
+				bg: "#ed812b",
+				color: "#fff",
+				_hover: {
+				bg: "#eb7314",
+				color: "#fff",
+				},
+			},
+			'share-em': {
+				bg: "#ea4335",
+				color: "#fff",
+				_hover: {
+				bg: "#e82e1e",
+				color: "#fff",
+				},
+			},
+			'share-ma': {
+				bg: "#168de2",
+				color: "#fff",
+				_hover: {
+				bg: "#147fcb",
+				color: "#fff",
+				},
+			},
 		},
 	  },
       Link: {
@@ -65,6 +121,7 @@ export const theme = extendTheme(
 		  _hover: {
 			color: "#f70035",
 			borderBottom: "1px solid #f6b4bc",
+			textDecoration: "none",
 		   },
         }),
       },
