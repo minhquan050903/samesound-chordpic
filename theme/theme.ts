@@ -54,6 +54,10 @@ export const theme = extendTheme(
 				color: "#fff",
 				fontWeight: "600",
 				fontSize: "14px",
+				_hover: {
+				bg: "#de0030",
+				color: "#fff",
+				},
 			},
 			'share-vk': {
 				bg: "#45668e",
