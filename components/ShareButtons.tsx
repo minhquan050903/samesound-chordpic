@@ -10,8 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { FaTelegram, FaTwitter, FaWhatsapp, FaOdnoklassniki, FaVk, FaCopy } from "react-icons/fa";
-import { MdFacebook, MdEmail } from "react-icons/md";
-import { TbShare } from "react-icons/tb";
+import { MdFacebook, MdEmail, MdIosShare } from "react-icons/md";
 import {
   EmailShareButton,
   FacebookShareButton,
@@ -65,7 +64,7 @@ export const ShareButtons = ({ chart }: IProps) => {
         Поделиться
       </Heading>
       <Button variant="outline" onClick={share}>
-        <Icon as={TbShare} mr={1} />
+        <Icon as={MdIosShare} mr={1} />
         Ссылка на диаграмму
       </Button>
 
