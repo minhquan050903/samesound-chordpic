@@ -161,7 +161,7 @@ export const theme = extendTheme(
       },
     },
     fonts: {
-      heading: `'IBM Plex Serif', sans-serif`,
+      heading: `'IBM Plex Serif', 'PT Serif', serif`,
       body: `'IBM Plex Sans', sans-serif`,
     },
     styles: {
