@@ -74,7 +74,7 @@ export const ShareButtons = ({ chart }: IProps) => {
             <Input
               ref={inputRef}
               pr="4.5rem"
-              aria-label="Sharing Link"
+              aria-label="Ссылка на диаграмму"
               readOnly={true}
               value={link}
               type="text"
@@ -89,21 +89,21 @@ export const ShareButtons = ({ chart }: IProps) => {
           <Flex wrap="wrap" gap={1} mt={3}>
             <VKShareButton url={link}>
               <Button size="sm" variant="share-vk">
-                <Icon as={FaVk} mr={1} />
+                <Icon as={FaVk} mr={1} width={20} height={20} />
                 VK
               </Button>
             </VKShareButton>            
             
             <TelegramShareButton url={link} title={title}>
               <Button size="sm" variant="share-tg">
-                <Icon as={FaTelegram} mr={1} />
+                <Icon as={FaTelegram} mr={1} width={20} height={20} />
                 Телеграм
               </Button>
             </TelegramShareButton>
             
             <FacebookShareButton url={link}>
               <Button size="sm" variant="share-fb">
-                <Icon as={MdFacebook} mr={1} />
+                <Icon as={MdFacebook} mr={1} width={20} height={20} />
                 Фейсбук
               </Button>
             </FacebookShareButton>
@@ -112,24 +112,24 @@ export const ShareButtons = ({ chart }: IProps) => {
               url={link}
               title={title}
               via="https://guitardiagrams.samesound.ru"
-              hashtags={["guitar", "chord"]}
+              hashtags={["аккорд", "гитара"]}
             >
               <Button size="sm" variant="share-tw">
-                <Icon as={FaTwitter} mr={1} />
+                <Icon as={FaTwitter} mr={1} width={20} height={20} />
                 Твиттер
               </Button>
             </TwitterShareButton>
             
             <OKShareButton url={link}>
               <Button size="sm" variant="share-ok">
-                <Icon as={FaOdnoklassniki} mr={1} />
+                <Icon as={FaOdnoklassniki} mr={1} width={20} height={20} />
                 OK
               </Button>
             </OKShareButton> 
 
             <WhatsappShareButton url={link} title={title}>
               <Button size="sm" variant="share-ws">
-                <Icon as={FaWhatsapp} mr={1} />
+                <Icon as={FaWhatsapp} mr={1} width={20} height={20} />
                 WhatsApp
               </Button>
             </WhatsappShareButton>
@@ -140,7 +140,7 @@ export const ShareButtons = ({ chart }: IProps) => {
               body="Диаграмма аккорда, которую я создал в генераторе диаграмм SAMESOUND"
             >
               <Button size="sm" variant="share-em">
-                <Icon as={MdEmail} mr={1} />
+                <Icon as={MdEmail} mr={1} width={20} height={20} />
                 Email
               </Button>
             </EmailShareButton>
