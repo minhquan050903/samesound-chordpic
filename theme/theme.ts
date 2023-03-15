@@ -51,6 +51,7 @@ export const theme = extendTheme(
 		variants: {
 			'solid-red-samesound': {
 				bg: "#f70035",
+				color: "#fff",
 			},
 		},
 	  },
