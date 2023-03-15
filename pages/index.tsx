@@ -47,7 +47,7 @@ const Home: NextPage = () => {
     <>
       <Heading as="h1">Генератор диаграмм гитарных аккордов</Heading>
       <Text mt={4} fontSize="lg">
-        Создание диаграмм ещё никогда не было таким простым и быстрым! Для начала работы нажмите в любом месте на схеме гитарного грифа{" "}
+        Создание диаграмм ещё никогда не было таким простым и быстрым! Для начала работы нажмите в любом месте на схеме гитарного грифа в{" "}
         <Link href="#editor">
           <i>редакторе</i>
         </Link>{" "}
@@ -86,9 +86,10 @@ const Home: NextPage = () => {
                   transform={[null, null, null, "rotate(-45deg)"]}
                   transformOrigin="0 0"
                   position={[null, null, null, "relative"]}
-                  top={8}
-                  left={-2}
+                  top={14}
+                  left={-1}
                   display="inline-block"
+				  fontWeight={500}
                 >
                   Редактор
                 </Heading>
