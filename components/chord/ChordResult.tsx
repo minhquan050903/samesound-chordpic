@@ -22,13 +22,13 @@ const ErrorFallback: React.FunctionComponent<{
       <Alert status="error">
         <AlertIcon />
         <Box>
-          Oops, something went wrong with the chord diagram. If this keeps
-          happening, please{" "}
-          <Link href={`mailto:${SUPPORT_EMAIL}`}>contact support</Link>. To
-          resolve the problem for now, please reset the settings.
+          Ой, что-то пошло не так при работе с диаграммой. Если ошибка повторится,
+          пожалуйста, {" "}
+          <Link href={`mailto:${SUPPORT_EMAIL}`}>сообщите нам об этом</Link>. Чтобы решить проблему самостоятельно,
+		  попробуйте очистить диаграмму и начать заново.
         </Box>
       </Alert>
-      <Button onClick={onReset}>Reset settings</Button>
+      <Button onClick={onReset}>Сбросить настройки</Button>
     </Box>
   );
 };
@@ -45,6 +45,8 @@ export const ChordResult: React.FunctionComponent = () => {
   }, [chart.chord, setChart]);
 
   return (
+    
       <ChordChart />
+
   );
 };
