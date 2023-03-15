@@ -153,7 +153,7 @@ export const ChordForm: React.FunctionComponent<{
                   valueAsNumber: true,
                   min: {
                     value: 1,
-                    message: "Начальный лад должен быть цифрой",
+                    message: "Начальный лад должен быть числом",
                   },
                   max: 50,
                 })}
@@ -175,7 +175,7 @@ export const ChordForm: React.FunctionComponent<{
                   valueAsNumber: true,
                   min: {
                     value: 1,
-                    message: "Must have at least 1 fret",
+                    message: "Хотя бы один лад должен быть :)",
                   },
                   max: {
                     value: 50,
@@ -195,12 +195,12 @@ export const ChordForm: React.FunctionComponent<{
             <FormLabel>
               Количество струн
               <Input
-                placeholder="Number of string..."
+                placeholder="6 или 7..."
                 {...register("strings", {
                   valueAsNumber: true,
                   min: {
                     value: 2,
-                    message: "Must have at least 2 strings",
+                    message: "Должно быть не менее двух струн",
                   },
                   max: {
                     value: 50,
@@ -264,8 +264,8 @@ export const ChordForm: React.FunctionComponent<{
               Фиксированная позиция
               <Tooltip
                 placement="top"
-                label="If enabled, the space between the diagram and the title will always be the same."
-                aria-label="If enabled, the space between the diagram and the title will always be the same."
+                label="Отметьте, чтобы расстояние между диаграммой и названием аккорда всегда было одинаковым."
+                aria-label="Отметьте, чтобы расстояние между диаграммой и названием аккорда всегда было одинаковым."
                 hasArrow={true}
               >
                 <QuestionIcon ml={2} />
@@ -287,7 +287,7 @@ export const ChordForm: React.FunctionComponent<{
                   name="fretSize"
                   render={({ field }) => (
                     <SliderWithTooltip
-                      aria-label="Chord chart height"
+                      aria-label="Высота диаграммы аккорда"
                       min={0.7}
                       max={5}
                       step={0.05}
@@ -307,7 +307,7 @@ export const ChordForm: React.FunctionComponent<{
                   name="fingerSize"
                   render={({ field }) => (
                     <SliderWithTooltip
-                      aria-label="Chord chart finger size"
+                      aria-label="Диаметр аппликатуры на струне"
                       min={0.5}
                       max={2}
                       step={0.01}
@@ -321,13 +321,13 @@ export const ChordForm: React.FunctionComponent<{
           <Box>
             <FormControl>
               <FormLabel>
-                Размер шрифта аппликатуры
+                Размер шрифта
                 <Controller
                   control={control}
                   name="fingerTextSize"
                   render={({ field }) => (
                     <SliderWithTooltip
-                      aria-label="Chord chart finger text size"
+                      aria-label="Размер шрифта аппликатуры аккорда"
                       min={10}
                       max={50}
                       step={1}
@@ -347,7 +347,7 @@ export const ChordForm: React.FunctionComponent<{
                   name="strokeWidth"
                   render={({ field }) => (
                     <SliderWithTooltip
-                      aria-label="Stroke width"
+                      aria-label="Ширина линий"
                       min={1}
                       max={10}
                       step={0.1}
