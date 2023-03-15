@@ -35,7 +35,7 @@ export const ChordChart: React.FunctionComponent = () => {
             ...chart.settings,
             svgTitle: "Диаграмма аккорда создана с помощью guitardiagrams.samesound.ru",
             watermark,
-            watermarkFontSize: 14,
+            watermarkFontSize: 12,
             watermarkColor: "rgba(0, 0, 0, 0.5)",
           })
           .chord(chart.chord)
