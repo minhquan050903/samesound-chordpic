@@ -43,8 +43,7 @@ export const ChordChart: React.FunctionComponent = () => {
 
         setSize(size);
       } catch (err) {
-        captureException(err, { extra: { chart } });
-
+        
         throw err;
       }
     }
