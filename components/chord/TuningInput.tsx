@@ -58,11 +58,11 @@ export const TuningInput = (props: IProps) => (
       return (
         <div key={i} className="string-input" data-cell-index={i}>
           <ScreenReaderLabel htmlFor={`tuning-input-string-${i}`}>
-            Tuning of String {stringLabel}
+            Настройка струны {stringLabel}
           </ScreenReaderLabel>
           <Input
             id={`tuning-input-string-${i}`}
-            placeholder={String(stringLabel)}
+            placeholder={Струна (stringLabel)}
             type="text"
             value={tuning}
             onChange={(e) =>
