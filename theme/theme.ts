@@ -140,6 +140,14 @@ export const theme = extendTheme(
 		},
 	  },
       Link: {
+		variants: {
+			'link-social': {
+				borderBottom: "none",
+				_hover: {
+				borderBottom: "none",
+				},
+			},
+		},
         baseStyle: ({ colorMode }: { colorMode: ColorMode }) => ({
           color: colorMode === "dark" ? "blue.400" : "blue.600",
           fontWeight: "600",
