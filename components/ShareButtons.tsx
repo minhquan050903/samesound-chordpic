@@ -9,9 +9,8 @@ import {
   InputRightElement,
 } from "@chakra-ui/react";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { FaTelegram, FaTwitter, FaWhatsapp, FaOdnoklassniki, FaVk } from "react-icons/fa";
-import { MdFacebook, MdShare, MdEmail } from "react-icons/md";
-import { Copy } from "react-feather";
+import { FaTelegram, FaTwitter, FaWhatsapp, FaOdnoklassniki, FaVk, FaCopy,  } from "react-icons/fa";
+import { MdFacebook, MdShareAll, MdEmail } from "react-icons/md";
 import {
   EmailShareButton,
   FacebookShareButton,
@@ -65,7 +64,7 @@ export const ShareButtons = ({ chart }: IProps) => {
         Поделиться
       </Heading>
       <Button variant="outline" onClick={share}>
-        <Icon as={MdShare} mr={1} />
+        <Icon as={MdShareAll} mr={1} />
         Ссылка на диаграмму
       </Button>
 
@@ -82,7 +81,7 @@ export const ShareButtons = ({ chart }: IProps) => {
             />
             <InputRightElement width="4.5rem">
               <Button h="1.75rem" size="sm" onClick={copyLink}>
-                <Icon as={Copy} mr={1} />
+                <Icon as={FaCopy} mr={1} />
               </Button>
             </InputRightElement>
           </InputGroup>
