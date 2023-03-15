@@ -17,28 +17,28 @@ export const EditModeInput = ({ onEditModeChange, editMode }: IProps) => {
         variant={editMode === EditMode.EDIT_NOTES ? "solid" : "outline"}
         size="sm"
       >
-        Edit Notes
+        Ноты
       </Button>
       <Button
         onClick={onChange(EditMode.EDIT_TEXT)}
         variant={editMode === EditMode.EDIT_TEXT ? "solid" : "outline"}
         size="sm"
       >
-        Edit Text
+        Текст
       </Button>
       <Button
         onClick={onChange(EditMode.EDIT_COLOR)}
         variant={editMode === EditMode.EDIT_COLOR ? "solid" : "outline"}
         size="sm"
       >
-        Edit Colors
+        Цвет
       </Button>
       <Button
         onClick={onChange(EditMode.EDIT_SHAPE)}
         variant={editMode === EditMode.EDIT_SHAPE ? "solid" : "outline"}
         size="sm"
       >
-        Edit Shapes
+        Форма
       </Button>
     </SimpleGrid>
   );
