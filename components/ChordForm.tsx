@@ -175,7 +175,7 @@ export const ChordForm: React.FunctionComponent<{
                   valueAsNumber: true,
                   min: {
                     value: 1,
-                    message: "Хотя бы один лад должен быть :)",
+                    message: "Хотя бы один лад точно должен быть :)",
                   },
                   max: {
                     value: 50,
@@ -195,7 +195,7 @@ export const ChordForm: React.FunctionComponent<{
             <FormLabel>
               Количество струн
               <Input
-                placeholder="6 или 7..."
+                placeholder="6..."
                 {...register("strings", {
                   valueAsNumber: true,
                   min: {
