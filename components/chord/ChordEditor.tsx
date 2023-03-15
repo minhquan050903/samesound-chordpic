@@ -111,8 +111,8 @@ export const ChordEditor = (props: IProps) => {
     <Box>
       <Tooltip
         placement="top"
-        label="Reset chord"
-        aria-label="Reset chord"
+        label="Очистить диаграмму"
+        aria-label="Очистить диаграмму"
         hasArrow={true}
       >
         <IconButton
@@ -121,7 +121,7 @@ export const ChordEditor = (props: IProps) => {
           position="absolute"
           right={3}
           top={3}
-          aria-label="Reset chord"
+          aria-label="Очистить диаграмму"
           variant="outline"
           icon={<DeleteIcon />}
         />
