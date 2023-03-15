@@ -38,7 +38,7 @@ export const Footer = () => {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <FaVk borderRadius={100} size="1.5em" textDecoration="none" borderBottom="none" /> 
+          <FaVk borderRadius={100} size="1.5em" /> 
         </Link>
         <Spacer />
         <Link href="/about">О проекте</Link>
