@@ -127,7 +127,7 @@ export const ChordForm: React.FunctionComponent<{
         <Box>
           <FormControl isInvalid={!!errors.title}>
             <FormLabel>
-              Название
+              Название аккорда
               <Input
                 placeholder="Аккорд..."
                 {...register("title", {
@@ -168,7 +168,7 @@ export const ChordForm: React.FunctionComponent<{
         <Box>
           <FormControl isInvalid={!!errors.frets}>
             <FormLabel>
-              Количество ладов
+              Лады
               <Input
                 placeholder="5..."
                 {...register("frets", {
@@ -193,7 +193,7 @@ export const ChordForm: React.FunctionComponent<{
         <Box>
           <FormControl isInvalid={!!errors.strings}>
             <FormLabel>
-              Количество струн
+              Струны
               <Input
                 placeholder="6..."
                 {...register("strings", {
@@ -390,7 +390,7 @@ export const ChordForm: React.FunctionComponent<{
           <Flex alignItems="flex-end" justify="flex-end">
             <FormLabel as="div">
               <Button
-                variant="outline"
+                variant="outline-clear"
                 display="flex"
                 gap={2}
                 onClick={resetSettings}
@@ -402,7 +402,7 @@ export const ChordForm: React.FunctionComponent<{
           </Flex>
         </SimpleGrid>
       </Collapse>
-      <Button variant="ghost" onClick={onToggle}>
+      <Button variant="ghost-shadow" onClick={onToggle}>
         {isOpen ? (
           <ChevronUpIcon boxSize={6} />
         ) : (
