@@ -18,7 +18,7 @@ export const ChordChart: React.FunctionComponent = () => {
 
   const watermark = React.useMemo(
     () =>
-      subscription === SubscriptionType.PRO ? "" : "created with chordpic.com",
+      subscription === SubscriptionType.PRO ? "" : "создано с помощью guitardiagrams.samesound.ru",
     [subscription]
   );
 
@@ -33,7 +33,7 @@ export const ChordChart: React.FunctionComponent = () => {
           .configure({
             ...defaultSVGuitarSettings,
             ...chart.settings,
-            svgTitle: "Chord diagram created with chordpic.com",
+            svgTitle: "Диаграмма аккорда создана с помощью guitardiagrams.samesound.ru",
             watermark,
             watermarkFontSize: 16,
             watermarkColor: "rgba(0, 0, 0, 0.5)",
@@ -43,6 +43,7 @@ export const ChordChart: React.FunctionComponent = () => {
 
         setSize(size);
       } catch (err) {
+        captureException(err, { extra: { chart } });
 
         throw err;
       }
