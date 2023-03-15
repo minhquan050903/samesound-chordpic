@@ -49,15 +49,14 @@ const ChordPage = () => {
   if (!chart) {
     return (
       <>
-        <Heading size="lg">Invalid sharing link</Heading>
+        <Heading size="lg">Неверная ссылка</Heading>
         <Text>
-          Sorry but this link does not seem to be a valid sharing link. Are you
-          sure you have the complete link?
+          К сожалению, ссылка, по которой вы перешли, некорректна. Проверьте правильность введённого адреса.
         </Text>
 
         <Text>
-          Anyway, all you can do now is{" "}
-          <Link href="/">go back and create a new guitar chord chart</Link>.
+          Если ссылка правильная, то всё, что вы сейчас можете — это{" "}
+          <Link href="/">вернуться на главную и создать новую диаграмму</Link>.
         </Text>
       </>
     );
@@ -80,11 +79,11 @@ const ChordPage = () => {
         <DownloadButtons />
         <ShareButtons chart={chart} />
         <Heading as="h2" size="lg" mb={3} mt={8}>
-          Edit
+          Изменить
         </Heading>
         <Link href="/" passHref legacyBehavior>
           <Button as="a" size="md" variant="solid">
-            Edit this chord diagram
+            Изменить эту диаграмму
           </Button>
         </Link>
       </GridItem>
