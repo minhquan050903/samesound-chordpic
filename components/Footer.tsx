@@ -21,7 +21,6 @@ export const Footer = () => {
         flexDirection={["column", "column", "row"]}
       >
         <Link
-          variant: "link-social"
 		  href="https://t.me/samesound"
           display="flex"
           alignItems="center"
