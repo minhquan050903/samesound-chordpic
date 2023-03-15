@@ -45,19 +45,19 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Heading as="h1">Guitar Chord Diagram Creator</Heading>
+      <Heading as="h1">Генератор диаграмм гитарных аккордов</Heading>
       <Text mt={4} fontSize="lg">
-        It&apos;s never been easier to create guitar chord diagrams! Start by
-        clicking anywhere on the{" "}
+        Создание диаграмм ещё никогда не было таким простым и быстрым! Для начала работы нажмите в любом месте на схеме гитарного грифа{" "}
         <Link href="#editor">
-          <i>editor</i>
+          <i>редакторе</i>
         </Link>{" "}
-        fret board and immediately see the result on the{" "}
+        — введённые данные сразу же отобразятся{" "}
         <Link href="#result">
-          <i>result</i>
+          <i>на диаграмме</i>
         </Link>{" "}
-        fret board. Then <Link href="#download">download</Link> and{" "}
-        <Link href="#share">share</Link> your chord diagram.
+         в соседнем окне.<br />
+		 Созданную диаграмму можно <Link href="#download">скачать</Link> или{" "}
+        <Link href="#share">поделиться ей в социальных сетях</Link>.
       </Text>
       {isClient && (
         <>
@@ -90,7 +90,7 @@ const Home: NextPage = () => {
                   left={-2}
                   display="inline-block"
                 >
-                  Editor
+                  Редактор
                 </Heading>
                 <Center>
                   <ChordEditor
@@ -123,19 +123,19 @@ const Home: NextPage = () => {
                   left={-2}
                   display="inline-block"
                 >
-                  Result
+                  Диаграмма
                 </Heading>
                 <Tooltip
                   placement="top"
-                  label="Rotate chord diagram"
-                  aria-label="Rotate chord diagram"
+                  label="Повернуть диаграмму"
+                  aria-label="Повернуть диаграмму"
                   hasArrow={true}
                 >
                   <IconButton
                     position="absolute"
                     right={3}
                     top={3}
-                    aria-label="Rotate chord diagram"
+                    aria-label="Повернуть диаграмму"
                     variant="outline"
                     icon={<RepeatIcon />}
                     onClick={() => {
