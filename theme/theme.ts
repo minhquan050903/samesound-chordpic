@@ -60,12 +60,17 @@ export const theme = extendTheme(
       Link: {
         baseStyle: ({ colorMode }: { colorMode: ColorMode }) => ({
           color: colorMode === "dark" ? "blue.400" : "blue.600",
-          fontWeight: "bold",
+          fontWeight: "600",
+		  borderBottom: "1px solid #bed0ea",
+		  _hover: {
+			color: "#f70035",
+			borderBottom: "1px solid #f6b4bc",
+		   },
         }),
       },
     },
     fonts: {
-      heading: `'IBM Plex Serif', serif`,
+      heading: `'IBM Plex Serif', sans-serif`,
       body: `'IBM Plex Sans', sans-serif`,
     },
     styles: {
@@ -77,6 +82,6 @@ export const theme = extendTheme(
     },
   },
   withDefaultColorScheme({
-    colorScheme: "blue",
+    colorScheme: "gray",
   })
 );
