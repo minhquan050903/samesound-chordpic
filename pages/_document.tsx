@@ -5,14 +5,34 @@ import Script from "next/script";
 export default class Document extends NextDocument {
   render() {
     return (
-      <Html lang="en">
+      <Html lang="ru">
         <Head>
           <Script
-            id="cookieyes"
-            type="text/javascript"
-            strategy="lazyOnload"
-            src="https://cdn-cookieyes.com/client_data/1b604b2eba7bd9fee27ccb84/script.js"
+            defer
+            data-domain="guitardiagrams.samesound.ru"
+            src="https://stats.samesound.ru/js/script.js"
           />
+		  
+		  <Script 
+			type="text/javascript" 
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(32834997, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+		/>
+		<noscript>
+			<div>
+				<img src="https://mc.yandex.ru/watch/32834997" style="position:absolute; left:-9999px;" alt="" />
+			</div>
+		</noscript>
+		  
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
@@ -20,7 +40,7 @@ export default class Document extends NextDocument {
             crossOrigin=""
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Besley:wght@400;600&family=Inter:wght@400;600&display=swap"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=IBM+Plex+Serif:wght@600;700&display=swap"
             rel="stylesheet"
           />
           <link
