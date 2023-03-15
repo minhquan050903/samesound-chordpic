@@ -123,6 +123,20 @@ export const theme = extendTheme(
 				color: "#fff",
 				},
 			},
+			'outline-clear': {
+				border: "1px solid #fc8181",
+				_hover: {
+				bg: "#fc8181",
+				border: "1px solid #e53e3e",
+				color: "#fff",
+				},
+			},
+			'ghost-shadow': {
+				bg: "#edf2f7",
+				_hover: {
+				bg: "#e2e8f0",
+				},
+			},
 		},
 	  },
       Link: {
