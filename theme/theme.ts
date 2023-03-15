@@ -111,6 +111,14 @@ export const theme = extendTheme(
 				color: "#fff",
 				},
 			},
+			'share-ws': {
+				bg: "#25d366",
+				color: "#fff",
+				_hover: {
+				bg: "#21bd5c",
+				color: "#fff",
+				},
+			},
 		},
 	  },
       Link: {
