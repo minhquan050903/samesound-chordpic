@@ -126,7 +126,7 @@ export const theme = extendTheme(
 			'outline-clear': {
 				border: "1px solid #fc8181",
 				_hover: {
-				bg: "#fc8181",
+				bg: "#e53e3e",
 				border: "1px solid #e53e3e",
 				color: "#fff",
 				},
