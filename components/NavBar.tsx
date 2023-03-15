@@ -178,6 +178,17 @@ const MenuLinks: React.FunctionComponent<{
             Войти
           </MenuItem>
         )}
+		
+		{pathname !== "https://samesound.ru" && (
+          <Box>
+            <NextLink href="https://samesound.ru" target="_blank" passHref legacyBehavior>
+              <Button as="a" size="md" onClick={onCloseMenu} variant="solid">
+                На SAMESOUND →
+              </Button>
+            </NextLink>
+          </Box>
+        )}
+		
       </Stack>
     </Box>
   );
