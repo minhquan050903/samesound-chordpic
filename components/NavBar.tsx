@@ -182,7 +182,7 @@ const MenuLinks: React.FunctionComponent<{
 		{pathname !== "https://samesound.ru" && (
           <Box>
             <NextLink href="https://samesound.ru" target="_blank" passHref legacyBehavior>
-              <Button as="a" size="md" onClick={onCloseMenu} variant="solid">
+              <Button as="a" size="md" onClick={onCloseMenu} variant="solid-red-samesound">
                 На SAMESOUND →
               </Button>
             </NextLink>
