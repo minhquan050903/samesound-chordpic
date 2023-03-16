@@ -28,8 +28,8 @@ interface Props {
 export async function getStaticProps(): Promise<GetStaticPropsResult<Props>> {
   return {
     props: {
-      title: "Sign in",
-      description: "Sign in to your ChordPic account.",
+      title: "Вход на сайт",
+      description: "Вход на сервис для создания гитарных диаграмм",
     },
   };
 }
@@ -106,14 +106,14 @@ const SignIn = () => {
           <form onSubmit={handleSignin}>
             <Box display="flex" flexDir="column" gap={4}>
               <Box>
-                <FormLabel htmlFor="email">Email</FormLabel>
+                <FormLabel htmlFor="email">Почта</FormLabel>
                 <Input
                   id="email"
                   name="email"
                   type="email"
                   border="2px"
                   borderColor="primary"
-                  placeholder="Email"
+                  placeholder="mail@user.ru"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -128,7 +128,7 @@ const SignIn = () => {
                 disabled={!email.length}
                 width="100%"
               >
-                Send magic link
+                Отправить волшебную ссылку для входа
               </Button>
             </Box>
           </form>
@@ -138,12 +138,12 @@ const SignIn = () => {
           <form onSubmit={handleSignin}>
             <Box display="flex" flexDir="column" gap={4}>
               <Box>
-                <FormLabel htmlFor="email">Email</FormLabel>
+                <FormLabel htmlFor="email">Почта</FormLabel>
                 <Input
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="Email"
+                  placeholder="pochta@tvoya.ru"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -151,12 +151,12 @@ const SignIn = () => {
                 />
               </Box>
               <Box>
-                <FormLabel htmlFor="password">Password</FormLabel>
+                <FormLabel htmlFor="password">Пароль</FormLabel>
                 <Input
                   id="password"
                   name="password"
                   type="password"
-                  placeholder="Password"
+                  placeholder="Пароль..."
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
@@ -171,7 +171,7 @@ const SignIn = () => {
                 disabled={!password.length || !email.length}
                 width="100%"
               >
-                Sign in
+                Войти
               </Button>
             </Box>
           </form>
@@ -210,18 +210,18 @@ const SignIn = () => {
         </Button> */}
 
         <Box textAlign="center" mb={2} mt={6} fontSize="sm">
-          <Box as="span">Don&apos;t have an account?</Box>
+          <Box as="span">Нет аккаунта?</Box>
           {` `}
           <NextLink href="/signup" legacyBehavior>
-            <Link>Sign up</Link>
+            <Link>Регистрация</Link>
           </NextLink>
           .
         </Box>
         <Box textAlign="center" my={2} fontSize="sm">
-          <Box as="span">Forgot password?</Box>
+          <Box as="span">Забыли пароль?</Box>
           {` `}
           <NextLink href="/reset-password" legacyBehavior>
-            <Link>Reset password</Link>
+            <Link>Изменить пароль</Link>
           </NextLink>
           .
         </Box>
