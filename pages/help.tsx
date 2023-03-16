@@ -47,122 +47,97 @@ const HelpPage = () => {
       <Text mb={3}>
 		В секции <em>Скачивания и расшаривания в социальных сетях</em> находятся кнопки скачивания диаграммы в различных форматах, а также кнопки социальных сетей — с их помощью диаграммой можно поделиться с друзьями, коллегами или учениками.
       </Text>
-      <Heading size="lg" mb={3} id="the-editor">
+      <Heading size="lg" mb={3} id="the-editor" marginTop="30px" fontWeight="600">
         Редактор
       </Heading>
       <Text mb={3}>
-        <strong>Добавление аппликатуры аккорда</strong>: Simply click anywhere you
-        want the finger to appear. To remove the finger, just click on it again
-        and it will disappear.
+        <strong>Добавление аппликатуры аккорда.</strong> Для отметки лада и указания схемы и аппликатуры аккорда, кликните в любом месте схемы гитарного грифа. Для удаления отметки кликните по ней ещё раз.
       </Text>
       <Flex justifyContent="center">
-        <Image src={toggleGif} alt="Example of adding and removing fingers" />
+        <Image src={toggleGif} alt="Пример добавления аппликатуры" />
       </Flex>
       <Text mb={3}>
-        <strong>Приглушённые и открытые струны</strong>: If there is no finger
-        on a string, an &apos;O&apos; automatically appears above the string
-        (open string). If you want to change that to an &apos;X&apos;
-        (don&apos;t play that string) simply click on the &apos;O&apos; to make
-        it an &apos;X&apos;. When you click it again it will change back to an
-        &apos;O&apos;.
+        <strong>Приглушённые и открытые струны.</strong> Если кликнуть в начале лада (за верхним порожком), редактор отметит струну символом «О», что обозначает открытую (не зажатую) струну.<br />
+		Чтобы отметить приглушённую струну, кликните по символу «О» ещё раз — редактор заменит его на символ «Х». Если кликнуть по символу «Х» ещё раз, редактор вернёт значок открытой струны.
       </Text>
       <Flex justifyContent="center">
         <Image
           src={silentstringsGif}
-          alt="Example of toggling strings from do not play to open"
+          alt="Пример использования приглушённых струн"
         />
       </Flex>
       <Text mb={3}>
-        <strong>Баррэ</strong>: To add a barre chord, you can
-        simply connect the strings with the mouse or if you&apos;re on mobile
-        you can swipe from one string to another with your finger. To remove the
-        bare chord simply click anywhere on the fret with the barre chord to
-        remove it.
+        <strong>Баррэ.</strong>: Чтобы указать баррэ, зажмите левую кнопку мыши и проведите указатель по всем ладам грифа. При работе на смартфоне свайпните от одной струны к другой.<br />
+		Вы можете указать баррэ любого размера. К примеру, для отметки малого баррэ (на три струны) достаточно провести зажатым указателем мыши или свайпнуть по трём ладам. Редактор позволяет отмечать баррэ на две, три, четыре, пять и шесть струн.<br />
+		Для удаления баррэ на схеме, кликните на любой лад любой струны.
       </Text>
       <Flex justifyContent="center">
         <Image
           src={barreGif}
-          alt="Example of adding and removing a barre chord"
+          alt="Пример создания диаграммы с баррэ"
         />
       </Flex>
       <Text mb={3}>
-        <strong>Подписи к аппликатуре</strong>: To add text
-        to any finger or barre chords, first click the &quot;Edit Text&quot;
-        button at the bottom of the editor to reveal a text field on top of each
-        finger and barre chord. You can now simply add or edit any text on each
-        finger or barre chord. When you&apos;re done you can click on the
-        &quot;Edit Notes&quot; button to continue editing the notes.
+        <strong>Подписи к аппликатуре/</strong> Для добавления цифр, обозначающих палец, которым зажимается струна на ладу, кликните по кнопке «Текст» под основным окном редактора. После нажатия на кнопку поверх иконки зажатого лада появится небольшое текстовое поле, в котором можно указать номер пальца.<br />
+		В поле можно вводить цифры и текст. После окончания ввода текста кликните по кнопке «Ноты» для сохранения изменений и продолжения работы с диаграммой.
       </Text>
       <Flex justifyContent="center">
         <Image
           src={editTextGif}
-          alt="Example of adding and editing text on fingers and barre chords"
+          alt="Пример добавления текста"
         />
       </Flex>
       <Text mb={3}>
-        <strong>Цветовое оформление</strong>: Changing
-        colors of fingers and barre chords works just like editing text. After
-        you added your fingers and barre chords click on the &quot;Edit
-        Colors&quot; button at the bottom of the editor section. After that,
-        click on any finger or barre chord to reveal a color picker where you
-        can pick your desired color.
+        <strong>Цветовое оформление.</strong> Помимо указания ладов и ввода текста, редактор позволяет изменить цвет элементов диаграммы. Для изменения цвета кликните по кнопке «Цвет» — редактор откроет палитру выбора цветов. Вы можете указать любой цвет в рамках цветового диапазона RGB.<br />
+		По окончанию выбора цвета, кликните по кнопке «Ноты» или «Текст» для сохранения изменений.
       </Text>
       <Flex justifyContent="center">
         <Image
           src={editColorsGif}
-          alt="Example of adding and editing text on fingers and barre chords"
+          alt="Пример работы с текстом"
         />
       </Flex>
       <Text mb={3}>
-        <strong>Изменение формы элементов</strong>: After you added your
-        fingers to the fret board click the &quot;Edit Shapes&quot; button at
-        the bottom of the editor section. After that, click on any finger to
-        change its shape. To revert the shape to a circle, keep clicking the
-        finger until the shape is a circle again.
+        <strong>Изменение формы элементов.</strong> Редактор также позволяет изменить форму элементов на схеме. Кликните по кнопке «Форма» под основным окном редактора, чтобы изменить форму отображения элементов.<br />
+		Чтобы вернуть к круглой форме элементов, кликните по иконке несколько раз.
       </Text>
       <Flex justifyContent="center">
         <Image
           src={editShapesGif}
-          alt="Example of changing the shape of a finger"
+          alt="Пример изменения цветового оформления"
         />
       </Flex>
       <Text mb={3}>
-        <strong>Подписи к струнам</strong>: To label the strings you can
-        enter any letters or numbers below the strings. By default the strings
-        are not labelled.
+        <strong>Подписи к струнам.</strong> С помощью подписей можно указать номера струн или строй инструмента.<br />
+		Чтобы указать подписи к струнам, введите цифры или буквы в одно из текстовых полей рядом со струнами в редакторе. По умолчанию подписи не отображаются.
       </Text>
       <Flex justifyContent="center">
         <Image
           src={labelsGif}
-          alt="Example of adding and removing a barre chord"
+          alt="Пример с баррэ"
         />
       </Flex>
-      <Heading size="lg" mb={3} id="the-result-section">
+      <Heading size="lg" mb={3} id="the-result-section" marginTop="30px" fontWeight="600">
         Итоговая диаграмма
       </Heading>
       <Text mb={3}>
-        The result section gives you a preview of what your chart image will
-        look like. All changes made in the editor section are immediately
-        visible in the result section. Sample chart:
+        В секции результатов отображается итоговая диаграмма, созданная на основе данных и настроек <em>Редактора</em>. Любые изменения параметров и внешнего вида схемы аккорда моментально отображаются на итоговой диаграмме:
       </Text>
       <Flex justifyContent="center">
-        <Image src={samplechordGif} alt="Example chord chart" />
+        <Image src={samplechordGif} alt="Пример созданной диаграммы аккорда" />
       </Flex>
-      <Heading size="lg" mb={3} id="the-download-sharing-section">
+      <Heading size="lg" mb={3} id="the-download-sharing-section" marginTop="30px" fontWeight="600">
         Скачивание и расшаривание в социальных сетях
       </Heading>
       <Text mb={3}>
-        In the download section you can download your chord chart as an image.
-        You can export the image as an SVG or PNG image. When you download a PNG
-        image, you have to chose between different resolutions. The height of
-        the images can vary and depend on what your chart looks like. The width
-        will always stay the same though, no matter what your chart looks like.
+        В секции скачивания отображаются несколько вариантов для сохранения результатов. Диаграммы экспортируются в виде изображений в форматах SVG или PNG.<br />
+		При скачивании изображения в формате PNG сервис предлагает несколько размеров диаграммы. Несмотря на подпись о разрешении изображения, итоговая высота картинки напрямую зависит от расширенных настроек: количества струн, подписей, их размеров и других параметров.<br />
+		В отличие от высоты, ширина изображения зафиксирована и не меняется исходя из заданных настроек.
       </Text>
       <Text mb={3}>
-        In the share section you can generate a link that you can share with
-        other people. All your settings and the whole chart are saved{" "}
-        <em>in that link</em>. The sharing section also allows you to share your
-        charts on many different platforms or messengers.
+        Сервис также позволяет поделиться созданной диаграммой. Так, например, можно сгенерировать прямую ссылку на аккорд, чтобы поделиться ей с другими людьми.<br />
+		<em>Ссылка содержит ряд дополнительных параметров</em>, благодаря чему открывший её пользователь увидит не только саму диаграмму, но и все настройки редактора. Пользователь, открывший схему по ссылке, сможет скачать диаграмму в форматах SVG и PNG, а также изменить её.<br />
+		Помимо прямых ссылок сервис позволяет поделиться диаграммой в социальных сетях и мессенджерах. Принцип системы аналогичен: перешедший по ссылке пользователь увидит диаграмму и все заданные в редакторе параметры, а также сможет изменить схему по своему желанию.
       </Text>
     </>
   );
