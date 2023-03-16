@@ -87,7 +87,7 @@ const Home: NextPage = () => {
                   transformOrigin="0 0"
                   position={[null, null, null, "relative"]}
                   top="46px"
-                  left="-7px"
+                  left="-5px"
                   display="inline-block"
 				  fontWeight={500}
                 >
@@ -116,12 +116,12 @@ const Home: NextPage = () => {
               <Box p={3} id="result" height="100%" position="relative">
                 <Heading
                   as="h2"
-                  size="sm"
+                  size="15px"
                   transform={[null, null, null, "rotate(-45deg)"]}
                   transformOrigin="0 0"
                   position={[null, null, null, "relative"]}
-                  top={8}
-                  left={-2}
+                  top="46px"
+                  left="-5px"
                   display="inline-block"
 				  fontWeight={500}
                 >
