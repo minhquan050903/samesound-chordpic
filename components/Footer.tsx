@@ -32,14 +32,17 @@ export const Footer = () => {
           rel="noopener noreferrer"
           target="_blank"
 		  borderBottom="none"
+		  _hover={{
+			borderBottom: "none",
+			}}
         >
-              <IconButton
-                    position="relative"
-                    variant="footer-tg"
-					aria-label="SAMESOUND в Телеграме"
-                    icon={<FaTelegram />}
-					height="30px"
-					width="30px"
+           <IconButton
+            position="relative"
+            variant="footer-tg"
+			aria-label="SAMESOUND в Телеграме"
+            icon={<FaTelegram />}
+			height="30px"
+			width="30px"
                   />
         </Link>
         <Link
@@ -50,6 +53,9 @@ export const Footer = () => {
           rel="noopener noreferrer"
           target="_blank"
 		  borderBottom="none"
+		  _hover={{
+			borderBottom: "none",
+			}}
         >
           <IconButton
             position="relative"
@@ -58,7 +64,7 @@ export const Footer = () => {
             icon={<FaVk />}
 			height="30px"
 			width="30px"
-                  />
+			/>
         </Link>
         <Spacer />
         <Link href="/about">О проекте</Link>
