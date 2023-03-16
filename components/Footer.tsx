@@ -67,9 +67,27 @@ export const Footer = () => {
 			/>
         </Link>
         <Spacer />
-        <Link href="/about">О проекте</Link>
-        <Link href="/terms">Условия использования</Link>
-        <Link href="/privacy-notice">Политика конфиденциальности</Link>
+        <Link 
+			href="/about"
+			borderBottom="none"
+			_hover={{
+				borderBottom: "none",
+			}}
+			>О проекте</Link>
+        <Link 
+			href="/terms"
+			borderBottom="none"
+			_hover={{
+				borderBottom: "none",
+			}}
+			>Условия использования</Link>
+        <Link 
+			href="/privacy-notice"
+			borderBottom="none"
+			_hover={{
+				borderBottom: "none",
+			}}
+			>Политика конфиденциальности</Link>
       </Container>
     </GridItem>
   );
