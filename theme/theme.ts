@@ -59,6 +59,12 @@ export const theme = extendTheme(
 				color: "#fff",
 				},
 			},
+			'solid-shadow-button': {
+				bg: "#e2e8f0",
+				_hover: {
+				bg: "#cbd5e0",
+				},
+			},
 			'share-vk': {
 				bg: "#45668e",
 				color: "#fff",
