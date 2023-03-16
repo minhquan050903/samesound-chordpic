@@ -41,7 +41,6 @@ export const Footer = () => {
                     icon={<FaTelegram />}
 					height="30px"
 					width="30px"
-					minWidth="30px"
                   />
         </Link>
         <Link
@@ -54,13 +53,12 @@ export const Footer = () => {
 		  borderBottom="none"
         >
           <IconButton
-                    position="relative"
-                    variant="footer-vk"
-					aria-label="SAMESOUND в ВКонтакте"
-                    icon={<FaVk />}
-					height="30px"
-					width="30px"
-					minWidth="30px"
+            position="relative"
+            variant="footer-vk"
+			aria-label="SAMESOUND в ВКонтакте"
+            icon={<FaVk />}
+			height="30px"
+			width="30px"
                   />
         </Link>
         <Spacer />
