@@ -35,11 +35,11 @@ export const Footer = () => {
         >
               <IconButton
                     position="relative"
-                    right={3}
-                    top={3}
                     variant="footer-tg"
 					aria-label="SAMESOUND в Телеграме"
                     icon={<FaTelegram />}
+					height="30px"
+					width="30px"
                   />
         </Link>
         <Link
@@ -49,10 +49,16 @@ export const Footer = () => {
           gap={2}
           rel="noopener noreferrer"
           target="_blank"
+		  borderBottom="none"
         >
-          <Button size="sm" variant="footer-vk">
-            <Icon as={FaVk} mr={1} width={4} height={4} />
-          </Button>
+          <IconButton
+                    position="relative"
+                    variant="footer-vk"
+					aria-label="SAMESOUND в ВКонтакте"
+                    icon={<FaVk />}
+					height="30px"
+					width="30px"
+                  />
         </Link>
         <Spacer />
         <Link href="/about">О проекте</Link>
