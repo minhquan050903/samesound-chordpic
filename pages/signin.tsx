@@ -186,9 +186,9 @@ const SignIn = () => {
               setMessage({});
             }}
           >
-            {`Или войдите с ${showPasswordInput ? "волшебной ссылкой" : "паролем"}`}
+            {`Войти ${showPasswordInput ? "по волшебной ссылке" : "с паролем"}`}
           </Link>
-          .
+          
         </Box>
 
         {/* <Box display="flex" alignItems="center" my={8}>
@@ -206,7 +206,7 @@ const SignIn = () => {
           width="100%"
         >
           <Icon as={FaGoogle} mr={3} />
-          Continue with Google
+          Google
         </Button> */}
 
         <Box textAlign="center" mb={2} mt={6} fontSize="sm">
@@ -215,7 +215,7 @@ const SignIn = () => {
           <NextLink href="/signup" legacyBehavior>
             <Link>Регистрация</Link>
           </NextLink>
-          .
+          
         </Box>
         <Box textAlign="center" my={2} fontSize="sm">
           <Box as="span">Забыли пароль?</Box>
@@ -223,7 +223,7 @@ const SignIn = () => {
           <NextLink href="/reset-password" legacyBehavior>
             <Link>Изменить пароль</Link>
           </NextLink>
-          .
+          
         </Box>
       </AuthBox>
     );
