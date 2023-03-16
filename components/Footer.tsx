@@ -25,6 +25,7 @@ export const Footer = () => {
         flexDirection={["column", "column", "row"]}
       >
         <Link
+		  class="
 		  href="https://t.me/samesound"
           display="flex"
           alignItems="center"
@@ -40,6 +41,7 @@ export const Footer = () => {
                     icon={<FaTelegram />}
 					height="30px"
 					width="30px"
+					minWidth="30px"
                   />
         </Link>
         <Link
@@ -58,6 +60,7 @@ export const Footer = () => {
                     icon={<FaVk />}
 					height="30px"
 					width="30px"
+					minWidth="30px"
                   />
         </Link>
         <Spacer />
