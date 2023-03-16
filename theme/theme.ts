@@ -125,11 +125,11 @@ export const theme = extendTheme(
 			},
 			'outline-clear': {
 				bg: "#fff9fa",
-				border: "1px solid #f70035",
+				border: "1px solid #ff617a",
 				fontWeight: "500",
 				_hover: {
-				bg: "#f70035",
-				border: "1px solid #f70035",
+				bg: "#ff617a",
+				border: "1px solid #ff617a",
 				color: "#fff",
 				},
 			},
@@ -139,6 +139,13 @@ export const theme = extendTheme(
 				marginTop: "10px",
 				_hover: {
 				bg: "#e2e8f0",
+				},
+			},
+			'outline-delete-editor': {
+				bg: "transparent",
+				_hover: {
+				bg: "#ff617a",
+				color: "#fff",
 				},
 			},
 			'footer-vk': {
@@ -151,7 +158,7 @@ export const theme = extendTheme(
 				color: "#fff",
 				},
 			},
-			'footer-telegram': {
+			'footer-tg': {
 				bg: "#0088cc",
 				color: "#fff",
 				borderRadius: "50%",
