@@ -70,6 +70,7 @@ export const Footer = () => {
         <Link 
 			href="/about"
 			borderBottom="none"
+			fontWeight="500"
 			_hover={{
 				borderBottom: "none",
 			}}
@@ -77,6 +78,7 @@ export const Footer = () => {
         <Link 
 			href="/terms"
 			borderBottom="none"
+			fontWeight="500"
 			_hover={{
 				borderBottom: "none",
 			}}
@@ -84,6 +86,7 @@ export const Footer = () => {
         <Link 
 			href="/privacy-notice"
 			borderBottom="none"
+			fontWeight="500"
 			_hover={{
 				borderBottom: "none",
 			}}
