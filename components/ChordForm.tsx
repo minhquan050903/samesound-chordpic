@@ -129,7 +129,7 @@ export const ChordForm: React.FunctionComponent<{
             <FormLabel>
               Название аккорда
               <Input
-                placeholder="Аккорд..."
+                placeholder="Amaj7..."
                 {...register("title", {
                   maxLength: {
                     value: 300,
