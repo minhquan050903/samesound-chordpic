@@ -85,10 +85,10 @@ const SignUp = () => {
           </div>
         )}
         <Flex direction="column" gap={2}>
-          <Input placeholder="Имя" onChange={(e) => setName(e.target.value)} />
+          <Input placeholder="Имя..." onChange={(e) => setName(e.target.value)} />
           <Input
             type="email"
-            placeholder="music@loves.you"
+            placeholder="Почта..."
             onChange={(e) => setEmail(e.target.value)}
             required
           />
