@@ -141,6 +141,26 @@ export const theme = extendTheme(
 				bg: "#e2e8f0",
 				},
 			},
+			'footer-vk': {
+				bg: "#45668e",
+				color: "#fff",
+				borderRadius: "50%",
+				borderBottom: "none",
+				_hover: {
+				bg: "#3d5a7d",
+				color: "#fff",
+				},
+			},
+			'footer-telegram': {
+				bg: "#0088cc",
+				color: "#fff",
+				borderRadius: "50%",
+				borderBottom: "none",
+				_hover: {
+				bg: "#0077b3",
+				color: "#fff",
+				},
+			},
 		},
 	  },
       Link: {
