@@ -124,15 +124,19 @@ export const theme = extendTheme(
 				},
 			},
 			'outline-clear': {
-				border: "1px solid #fc8181",
+				bg: "#fff9fa",
+				border: "1px solid #f70035",
+				fontWeight: "500",
 				_hover: {
-				bg: "#e53e3e",
-				border: "1px solid #e53e3e",
+				bg: "#f70035",
+				border: "1px solid #f70035",
 				color: "#fff",
 				},
 			},
 			'ghost-shadow': {
 				bg: "#edf2f7",
+				fontWeight: "500",
+				marginTop: "10px",
 				_hover: {
 				bg: "#e2e8f0",
 				},
@@ -161,7 +165,7 @@ export const theme = extendTheme(
       },
     },
     fonts: {
-      heading: `'IBM Plex Serif', 'PT Serif', serif`,
+      heading: `'IBM Plex Serif', serif`,
       body: `'IBM Plex Sans', sans-serif`,
     },
     styles: {
