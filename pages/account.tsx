@@ -77,11 +77,11 @@ export default function Account({ user }: { user: User }) {
       </Heading>
       <SimpleGrid gap={3} minChildWidth="15rem">
         <Card
-          title="Your Plan"
+          title="Тариф"
           description={
             subscription ? (
               <>
-                You are currently on the{" "}
+                Ваш тариф:{" "}
                 <Badge>{subscription?.prices?.products?.name}</Badge> plan.
               </>
             ) : (
@@ -92,7 +92,7 @@ export default function Account({ user }: { user: User }) {
             <>
               {subscription && (
                 <Box>
-                  <Text mb={4}>Manage your subscription</Text>
+                  <Text mb={4}>Управление подпиской</Text>
                   <Button
                     variant="solid"
                     isLoading={loading}
@@ -114,7 +114,7 @@ export default function Account({ user }: { user: User }) {
             ) : (
               <NextLink href="/pricing" passHref legacyBehavior>
                 <Button as="a" variant="solid">
-                  Choose your plan
+                  Выбор тарифа
                 </Button>
               </NextLink>
             )}
