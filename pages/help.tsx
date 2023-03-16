@@ -53,7 +53,7 @@ const HelpPage = () => {
       <Text mb={3}>
         <strong>Добавление аппликатуры аккорда.</strong> Для отметки лада и указания схемы и аппликатуры аккорда, кликните в любом месте схемы гитарного грифа. Для удаления отметки кликните по ней ещё раз.
       </Text>
-      <Flex justifyContent="center">
+      <Flex justifyContent="center" marginBottom="10px">
         <Image src={toggleGif} alt="Пример добавления аппликатуры" />
       </Flex>
       <Text mb={3}>
@@ -62,7 +62,7 @@ const HelpPage = () => {
 	  <Text mb={3}>
 		Чтобы отметить приглушённую струну, кликните по символу «О» ещё раз — редактор заменит его на символ «Х». Если кликнуть по символу «Х» ещё раз, редактор вернёт значок открытой струны.
       </Text>
-      <Flex justifyContent="center">
+      <Flex justifyContent="center" marginBottom="10px">
         <Image
           src={silentstringsGif}
           alt="Пример использования приглушённых струн"
@@ -77,7 +77,7 @@ const HelpPage = () => {
 	  <Text mb={3}>	
 		Для удаления баррэ на схеме, кликните на любой лад любой струны.
       </Text>
-      <Flex justifyContent="center">
+      <Flex justifyContent="center" marginBottom="10px">
         <Image
           src={barreGif}
           alt="Пример создания диаграммы с баррэ"
@@ -89,7 +89,7 @@ const HelpPage = () => {
 	  <Text mb={3}>
 		В поле можно вводить цифры и буквы. После окончания ввода текста кликните по кнопке «Ноты» для сохранения изменений и продолжения работы с диаграммой.
       </Text>
-      <Flex justifyContent="center">
+      <Flex justifyContent="center" marginBottom="10px">
         <Image
           src={editTextGif}
           alt="Пример добавления текста"
@@ -101,7 +101,7 @@ const HelpPage = () => {
       <Text mb={3}>	  
 		Вы можете указать любой цвет в рамках цветового диапазона RGB. По окончанию выбора цвета, кликните по кнопке «Ноты» или «Текст» для сохранения изменений.
       </Text>
-      <Flex justifyContent="center">
+      <Flex justifyContent="center" marginBottom="10px">
         <Image
           src={editColorsGif}
           alt="Пример работы с текстом"
@@ -113,7 +113,7 @@ const HelpPage = () => {
 	  <Text mb={3}>
 		Чтобы вернуть к круглой форме элементов, кликните по иконке несколько раз.
       </Text>
-      <Flex justifyContent="center">
+      <Flex justifyContent="center" marginBottom="10px">
         <Image
           src={editShapesGif}
           alt="Пример изменения цветового оформления"
@@ -125,7 +125,7 @@ const HelpPage = () => {
 	  <Text mb={3}>
 		Чтобы указать подписи к струнам, введите цифры или буквы в одно из текстовых полей рядом со струнами в редакторе. По умолчанию подписи не отображаются.
       </Text>
-      <Flex justifyContent="center">
+      <Flex justifyContent="center" marginBottom="10px">
         <Image
           src={labelsGif}
           alt="Пример с баррэ"
@@ -137,7 +137,7 @@ const HelpPage = () => {
       <Text mb={3}>
         В секции результатов отображается итоговая диаграмма, созданная на основе данных и настроек <em>Редактора</em>. Любые изменения параметров и внешнего вида схемы аккорда моментально отображаются на итоговой диаграмме:
       </Text>
-      <Flex justifyContent="center">
+      <Flex justifyContent="center" marginBottom="10px">
         <Image src={samplechordGif} alt="Пример созданной диаграммы аккорда" />
       </Flex>
       <Heading size="lg" mb={3} id="the-download-sharing-section" marginTop="30px" fontWeight="600">
