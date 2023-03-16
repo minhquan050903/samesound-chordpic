@@ -153,6 +153,7 @@ export const theme = extendTheme(
 				color: "#fff",
 				borderRadius: "50%",
 				borderBottom: "none",
+				minWidth: "30px",
 				_hover: {
 				bg: "#3d5a7d",
 				color: "#fff",
@@ -163,6 +164,7 @@ export const theme = extendTheme(
 				color: "#fff",
 				borderRadius: "50%",
 				borderBottom: "none",
+				minWidth: "30px",
 				_hover: {
 				bg: "#0077b3",
 				color: "#fff",
