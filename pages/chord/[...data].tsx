@@ -78,12 +78,12 @@ const ChordPage = () => {
       <GridItem>
         <DownloadButtons />
         <ShareButtons chart={chart} />
-        <Heading as="h2" size="lg" mb={3} mt={8}>
-          Изменить
+        <Heading as="h2" size="lg" mb={3} mt={8} fontWeight="500">
+          Нужно что-то поменять?
         </Heading>
         <Link href="/" passHref legacyBehavior>
           <Button as="a" size="md" variant="solid">
-            Изменить эту диаграмму
+            Изменить диаграмму
           </Button>
         </Link>
       </GridItem>
