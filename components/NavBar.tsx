@@ -33,8 +33,10 @@ const Logo: React.FunctionComponent = () => {
           alignItems="center"
           gap={3}
           fontSize="1.25rem"
+		  borderBottom="none"
           _hover={{
             textDecor: "none",
+			borderBottom: "none",
           }}
           color={bg}
         >
@@ -96,7 +98,13 @@ const MenuItem: React.FunctionComponent<
 > = ({ children, onNavigate, to = "/" }) => {
   return (
     <NextLink href={to} passHref legacyBehavior>
-      <Link whiteSpace="nowrap" onClick={onNavigate}>
+      <Link 
+		whiteSpace="nowrap" 
+		borderBottom="none"
+		 _hover={{
+			borderBottom: "none",
+			}}
+		onClick={onNavigate}>
         {children}
       </Link>
     </NextLink>
@@ -182,7 +190,7 @@ const MenuLinks: React.FunctionComponent<{
 		{pathname !== "https://samesound.ru" && (
           <Box>
             <NextLink href="https://samesound.ru" target="_blank" passHref legacyBehavior>
-              <Button as="a" size="md" onClick={onCloseMenu} variant="solid-red-samesound">
+              <Button as="a" size="md" onClick={onCloseMenu} variant="solid">
                 На SAMESOUND →
               </Button>
             </NextLink>
