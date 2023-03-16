@@ -31,7 +31,7 @@ export const SliderWithTooltip: ComponentWithAs<
   return (
     <Slider
       ref={ref}
-      aria-label="Chord chart finger size"
+      aria-label="Размер элемента"
       min={min}
       max={max}
       step={step}
