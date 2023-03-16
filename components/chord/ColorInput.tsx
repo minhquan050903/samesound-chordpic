@@ -77,7 +77,7 @@ export const ColorInput = (props: Props) => {
           onClick={() => setVisible(!visible)}
         >
           <ColorPreview color={props.value} />
-          Select Color...
+          Выбрать цвет...
         </ColorPreviewButton>
       )}
 
