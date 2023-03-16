@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Container,
   Flex,
   GridItem,
@@ -8,6 +9,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { TelegramIcon, VKIcon } from "react-share";
+import { FaTelegram, FaVk } from "react-icons/fa";
 
 export const Footer = () => {
   const bg = useColorModeValue("gray.100", "gray.900");
@@ -28,7 +30,9 @@ export const Footer = () => {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <TelegramIcon borderRadius={100} size="1.5em" /> 
+          <Button size="sm" variant="footer-tg">
+                <Icon as={FaTelegram} mr={1} width={4} height={4} />
+           </Button>
         </Link>
         <Link
           href="https://vk.com/samesound"
@@ -38,7 +42,9 @@ export const Footer = () => {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <VKIcon borderRadius={100} size="1.5em" /> 
+          <Button size="sm" variant="footer-vk">
+            <Icon as={FaVk} mr={1} width={4} height={4} />
+            </Button>
         </Link>
         <Spacer />
         <Link href="/about">О проекте</Link>
