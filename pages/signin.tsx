@@ -186,7 +186,7 @@ const SignIn = () => {
               setMessage({});
             }}
           >
-            {`Или войдите с помощью ${showPasswordInput ? "magic link" : "password"}`}
+            {`Или войдите с ${showPasswordInput ? "волшебной ссылкой" : "паролем"}`}
           </Link>
           .
         </Box>
