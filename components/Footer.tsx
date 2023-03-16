@@ -5,6 +5,7 @@ import {
   Flex,
   GridItem,
   Icon,
+  IconButton,
   Link,
   Spacer,
   useColorModeValue,
@@ -30,10 +31,15 @@ export const Footer = () => {
           gap={2}
           rel="noopener noreferrer"
           target="_blank"
+		  borderBottom="none"
         >
-          <Button size="sm" variant="footer-tg">
-                <Icon as={FaTelegram} mr={1} width={4} height={4} />
-           </Button>
+              <IconButton
+                    position="relative"
+                    right={3}
+                    top={3}
+                    variant="footer-tg"
+                    icon={<FaTelegram />}
+                  />
         </Link>
         <Link
           href="https://vk.com/samesound"
@@ -45,7 +51,7 @@ export const Footer = () => {
         >
           <Button size="sm" variant="footer-vk">
             <Icon as={FaVk} mr={1} width={4} height={4} />
-            </Button>
+          </Button>
         </Link>
         <Spacer />
         <Link href="/about">О проекте</Link>
