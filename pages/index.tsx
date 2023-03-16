@@ -81,7 +81,7 @@ const Home: NextPage = () => {
             >
               <Box p={3} id="editor" position="relative">
                 <Heading
-                  as="h2 editor"
+                  as="h2"
                   size="15px"
                   transform={[null, null, null, "rotate(-45deg)"]}
                   transformOrigin="0 0"
@@ -115,7 +115,7 @@ const Home: NextPage = () => {
             >
               <Box p={3} id="result" height="100%" position="relative">
                 <Heading
-                  as="h2 result"
+                  as="h2"
                   size="15px"
                   transform={[null, null, null, "rotate(-45deg)"]}
                   transformOrigin="0 0"
