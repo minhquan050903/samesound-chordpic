@@ -38,6 +38,7 @@ export const Footer = () => {
                     right={3}
                     top={3}
                     variant="footer-tg"
+					aria-label="SAMESOUND в Телеграме"
                     icon={<FaTelegram />}
                   />
         </Link>
