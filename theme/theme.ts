@@ -61,6 +61,7 @@ export const theme = extendTheme(
 			},
 			'solid-shadow-button': {
 				bg: "#e2e8f0",
+				fontSize: "14px",
 				_hover: {
 				bg: "#cbd5e0",
 				},
