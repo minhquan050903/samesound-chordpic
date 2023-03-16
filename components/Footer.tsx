@@ -4,6 +4,7 @@ import {
   Container,
   Flex,
   GridItem,
+  Icon,
   Link,
   Spacer,
   useColorModeValue,
