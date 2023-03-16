@@ -60,7 +60,7 @@ export const ShareButtons = ({ chart }: IProps) => {
 
   return (
     <Box mt={8} id="share">
-      <Heading as="h2" size="1.75em" mb={2} fontWeight="500">
+      <Heading as="h2" size="1.65rem" mb={2} fontWeight="500">
         Поделиться
       </Heading>
       <Button variant="outline" onClick={share}>
