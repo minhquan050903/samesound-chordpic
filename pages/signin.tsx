@@ -63,8 +63,8 @@ const SignIn = () => {
       }
       if (!password && !error) {
         toast({
-          title: "Magic link sent!",
-          description: "Check your email for the magic link.",
+          title: "Волшебная ссылка отправлена!",
+          description: "Проверьте адрес электронной почты — ссылка на вход уже там (или в папке «Спам»).",
           status: "success",
           duration: 9000,
           isClosable: true,
@@ -95,7 +95,7 @@ const SignIn = () => {
 
   if (!user)
     return (
-      <AuthBox title="Sign in to Chordpic">
+      <AuthBox title="Вход на сайт">
         {message.content && (
           <Text color="red.500" fontSize="sm">
             {message.content}
@@ -113,7 +113,7 @@ const SignIn = () => {
                   type="email"
                   border="2px"
                   borderColor="primary"
-                  placeholder="mail@user.ru"
+                  placeholder="music@loves.you"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -128,7 +128,7 @@ const SignIn = () => {
                 disabled={!email.length}
                 width="100%"
               >
-                Отправить волшебную ссылку для входа
+                Волшебная ссылка для входа
               </Button>
             </Box>
           </form>
@@ -143,7 +143,7 @@ const SignIn = () => {
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="pochta@tvoya.ru"
+                  placeholder="music@loves.you"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -186,7 +186,7 @@ const SignIn = () => {
               setMessage({});
             }}
           >
-            {`Or sign in with ${showPasswordInput ? "magic link" : "password"}`}
+            {`Или войдите с помощью ${showPasswordInput ? "magic link" : "password"}`}
           </Link>
           .
         </Box>
@@ -210,7 +210,7 @@ const SignIn = () => {
         </Button> */}
 
         <Box textAlign="center" mb={2} mt={6} fontSize="sm">
-          <Box as="span">Нет аккаунта?</Box>
+          <Box as="span">Впервые здесь?</Box>
           {` `}
           <NextLink href="/signup" legacyBehavior>
             <Link>Регистрация</Link>
