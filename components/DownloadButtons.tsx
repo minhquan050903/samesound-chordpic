@@ -56,7 +56,7 @@ export const DownloadButtons = ({ title }: IProps) => {
 
   return (
     <Box mt={8} id="download">
-      <Heading as="h2" size="1.75em" mb={2} fontWeight="500">
+      <Heading as="h2" size="1.65rem" mb={2} fontWeight="500">
         Скачать
       </Heading>
       <Flex gap={3} wrap="wrap">
