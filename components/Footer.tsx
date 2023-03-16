@@ -25,7 +25,6 @@ export const Footer = () => {
         flexDirection={["column", "column", "row"]}
       >
         <Link
-		  class="
 		  href="https://t.me/samesound"
           display="flex"
           alignItems="center"
