@@ -71,7 +71,7 @@ const SignUp = () => {
   }, [newUser, user, router]);
 
   return (
-    <AuthBox title="Sign up for Chordpic">
+    <AuthBox title="Регистрация">
       <form onSubmit={handleSignup} className="flex flex-col space-y-4">
         {message.content && (
           <div
@@ -85,16 +85,16 @@ const SignUp = () => {
           </div>
         )}
         <Flex direction="column" gap={2}>
-          <Input placeholder="Name" onChange={(e) => setName(e.target.value)} />
+          <Input placeholder="Имя" onChange={(e) => setName(e.target.value)} />
           <Input
             type="email"
-            placeholder="Email"
+            placeholder="music@loves.you"
             onChange={(e) => setEmail(e.target.value)}
             required
           />
           <Input
             type="password"
-            placeholder="Password"
+            placeholder="Пароль..."
             onChange={(e) => setPassword(e.target.value)}
           />
         </Flex>
@@ -105,14 +105,14 @@ const SignUp = () => {
           disabled={loading || !email.length || !password.length}
           width="100%"
         >
-          Sign up
+          Зарегистрироваться
         </Button>
 
         <Box textAlign="center">
-          <Box as="span">Do you have an account?</Box>
+          <Box as="span">Уже зарегистрированы?</Box>
           {` `}
           <NextLink href="/signin" passHref legacyBehavior>
-            <Link>Sign in.</Link>
+            <Link>Войти.</Link>
           </NextLink>
         </Box>
       </form>
