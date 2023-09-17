@@ -6,7 +6,10 @@ import { Product, Price, Customer, UserDetails } from "../types";
 
 // Note: supabaseAdmin uses the SERVICE_ROLE_KEY which you must only use in a secure server-side context
 // as it has admin priviliges and overwrites RLS policies!
-const supabaseAdmin = createClient("https://eaxphxtqsdbudmwxjykp.supabase.co","eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVheHBoeHRxc2RidWRtd3hqeWtwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTQ3NDEwNzIsImV4cCI6MjAxMDMxNzA3Mn0.JJXQpGVjNVTrtJBOc9fS8psyyrzmYhJz6jdaOk-kYKs");
+const supabaseAdmin = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL || "",
+  process.env.SUPABASE_SERVICE_ROLE_KEY || ""
+);
 
 const upsertProductRecord = async (product: Stripe.Product) => {
   const productData: Product = {
